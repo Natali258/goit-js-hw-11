@@ -1,28 +1,73 @@
-.example {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  line-height: 1.5;
-  background-color: #fff;
-  color: #2f2f37;
-  max-width: 960px;
-  padding: 16px;
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Roboto, sans-serif;
+  background-color: rgb(47, 46, 46);
 }
 
-.example code {
-  font-family: monospace;
-  font-size: 16px;
-  font-weight: 700;
-  background-color: #ff6b0a;
-  color: #fff;
-  padding: 2px 6px;
-  border-radius: 2px;
+header {
+  display: block;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(47, 46, 46);
 }
 
-.example .background {
-  height: 240px;
-  // ❗️❗️❗️ The path to images from a SASS file
-  // is always the same as from the css folder.
-  background-image: url('../images/logo.png');
-  background-size: cover;
-  background-position: center;
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 50px;
+}
+
+.photo-card {
+  width: calc(100% / 3 - 10px * 2);
+  
+  box-shadow: 0px 0px 5px 2px rgba(0, 4, 56, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(223, 157, 157, 0.815);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.photo-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.btn-load {
+  display: flex;
+  justify-content: center;
+}
+
+.load-more {
+  display: block;
+  margin-top: 50px;
+}
+
+.is-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
